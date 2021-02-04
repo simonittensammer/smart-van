@@ -1,3 +1,7 @@
-table {
+.tableWrapper {
   width: 50%;
+}
+
+table, mat-paginator {
+  width: 100%;
 }
