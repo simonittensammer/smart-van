@@ -9,6 +9,10 @@ mat-toolbar {
   position: fixed;
 }
 
+mat-toolbar > * {
+  cursor: pointer;
+}
+
 .example-spacer {
   width: 30px;
 }
