@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MeasurementService} from '../services/measurement.service';
 import {DatePipe} from '@angular/common';
 import {Label} from 'ng2-charts';
-import {ChartDataSets} from 'chart.js';
+import {ChartDataSets, ChartType} from 'chart.js';
 
 @Component({
   selector: 'app-measurement-bar-chart',
@@ -20,8 +20,8 @@ export class MeasurementBarChartComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public lineChartLabels: Label[] = [];
-  public lineChartType = 'line';
+  public lineChartLabels: string[] = [];
+  public lineChartType: ChartType = 'line';
   public lineChartLegend = true;
   public lineChartData: ChartDataSets[] = [];
 
@@ -36,7 +36,7 @@ export class MeasurementBarChartComponent implements OnInit {
       });
 
       this.lineChartLabels = this.measurementService.measurements.map(el => {
-        return this.pipe.transform(el.timeStamp, 'shortTime');
+        return this.pipe.transform(el.timeStamp, 'shortTime') + '';
       });
 
       this.lineChartData = [
