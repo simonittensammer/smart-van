@@ -8,6 +8,8 @@ import {MeasurementService} from '../services/measurement.service';
 })
 export class MeasurementOverviewComponent implements OnInit {
 
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+
   constructor(
     public measurementService: MeasurementService
   ) { }
