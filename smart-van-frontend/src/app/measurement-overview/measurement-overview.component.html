@@ -1,1 +1,5 @@
 <p>measurement-overview works!</p>
+
+<ul *ngFor="let measurement of measurementService.measurements">
+  <li>{{ measurement.temp }}</li>
+</ul>

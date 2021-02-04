@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MeasurementService} from '../services/measurement.service';
 
 @Component({
   selector: 'app-measurement-overview',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeasurementOverviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public measurementService: MeasurementService
+  ) { }
 
   ngOnInit(): void {
+    this.measurementService.getAllMeasurements().subscribe(value => {
+      this.measurementService.measurements = value;
+    });
   }
 
 }
