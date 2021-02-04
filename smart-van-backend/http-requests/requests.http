@@ -3,3 +3,14 @@
 GET http://localhost:8080/measurement
 
 ###
+
+POST http://localhost:8080/measurement
+Content-Type: application/json
+
+{
+  "temp": 21.69,
+  "timeStamp": "2021-02-04T01:02:03",
+  "sensorId": 1
+}
+
+###
