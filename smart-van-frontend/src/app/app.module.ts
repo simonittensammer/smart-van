@@ -12,6 +12,7 @@ import { ChartsModule } from 'ng2-charts';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     ChartsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
